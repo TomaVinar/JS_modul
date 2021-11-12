@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+
+
+<script>
+
+    // 1. Створити масив з 10 чисел (можна використовувати Math.random Та Math.floor). Скласти результат цих чисел в змінній result.
+
+    let array = [23, 101, 300, 14, 15, 81, 75, 92, 3, 66]
+    let result = array[0] + array[1] + array[2] + array[3] + array[4] + array[5] + array[6] + array[7] + array[8] + array[9];
+    console.log(result);
+
+    // 2. Створити об'єкт book з наступними полями  - назва, кількість сторінок, жанр
+
+    let book = {
+        title: 'Зеленый свет',
+        pageNubmer: 302,
+        genre: 'biography'
+    }
+
+    console.log(book)
+
+    // 3. Створити об'єкт book з наступними полями  - назва, кількість сторінок, жанр, автори
+
+    let bookSecond = {
+        title: 'Книга Мир по Тому Хэнксу. Жизненное кредо, благие намерения и добрые дела самого клевого парня Америки',
+        pageNubmer: 368,
+        type: 'autobiography',
+        author: 'Gevin Edvards'
+    }
+
+    console.log(bookSecond)
+
+    // 4. Створити маcив об'єктів book з наступними полями  - назва, кількість сторінок, жанр, автори. Вивести кожну книгу як окремий об'єкт
+
+    let library = [
+        {
+            name: 'Книга Мир по Тому Хэнксу. Жизненное кредо, благие намерения и добрые дела самого клевого парня Америки',
+            pages: 368,
+            type: 'autobiography',
+            author: 'Gevin Edvards'
+        },
+        {
+            title: 'Зеленый свет',
+            pageNubmer: 302,
+            genre: 'biography',
+            author: 'Met MacConahy'
+        },
+        {
+            title: 'History of the world',
+            pageNubmer: 444,
+            genre: 'history',
+            author: 'Mike Peterson'
+        },
+        {
+            title: 'Method',
+            pageNubmer: 904,
+            genre: 'science',
+            author: 'Peter Brix'
+        },
+        {
+            title: 'Smart talks',
+            pageNubmer: 101,
+            genre: 'psychology',
+            author: 'Marta Smith'
+        }
+    ]
+
+    console.log(library[0])
+    console.log(library[1])
+    console.log(library[2])
+    console.log(library[3])
+    console.log(library[4])
+
+
+    // 5. Напишіть код, який вираховує площу прямокутника висотою 23см. (змінна height) та шириною 10см (змінна width).
+    // Значення площі зберігати в змінній s.
+
+    let width = 10;
+    let height = 23;
+
+    let s = width * height;
+
+    console.log(s)
+
+    // 6. Напиши код, який знаходить об'єм циліндра заввишки 10м (змінна heightC) та діаметром основи 4м (dC),
+    // результат помістіть у змінну v.
+
+    let heightC = 10;
+    let dC = 4;
+
+    // let v = Math.PI * (dC/2)**2 * heightC;
+    let v = Math.PI * Math.pow(dC/2, 2) * heightC;
+
+    console.log(v)
+
+    // 7. У прямокутного трикутника дві сторони n (зі значенням 3) та m (зі значенням 4).
+    // Знайдіть гіпотенузу k за теоремою Піфагора (потрібно використовувати функцію Math.pow (число, ступінь) або оператор зведення в ступінь **).
+
+    let firstSide = 3;
+    let seconSide = 4;
+
+    let gipotanuza = Math.sqrt(firstSide**2 + seconSide**2);
+
+    console.log(gipotanuza)
+
+
+</script>
+
+</body>
+</html>
