@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>additional_lesson2</title>
+</head>
+<body>
+
+<script>
+
+    // - Нам дано масив друзів let friends = ["Ivan", "Slavik", "Grisha", "Lera", "Ira"]; Потрібно зробити перевірку якщо
+    // кількість елементів у масиві більше або дорівнює 3, то виводиться повідомлення про те, що це великий масив, в якому  3 і більше елементи.
+    //     Інакше слід вивести на екран повідомлення про те, що це маленький масив, в якому менше 3-х елементів.
+
+    let friends = ['Ivan', 'Slavik', 'Grisha', 'Lera', 'Ira'];
+    if ( friends.length <= 3) {
+        console.log('маленький масив');
+    }
+    else if (friends.length > 3) {
+        console.log('великий масив');
+    }
+
+
+    // - Маємо 3 числа і між ним  нам потрібно знайти те що посередині.
+    //     Знайти, яке з них є середнім (більше одного, але менше за інше). Перевірити, чи знаходиться перше число між двома іншими.
+
+
+    let a = prompt('Введіть перше число');
+    let b = prompt('Введіть друге число');
+    let c = prompt('Введіть третє число');
+    if (a > b && a < c) {
+        console.log('a');
+    }
+    else if (a > b && a < c) {
+        console.log('a');
+    }
+    else if (b < a && b > c) {
+        console.log(b);
+    }
+    else if (b > a && b < c) {
+        console.log('b');
+    }
+    else if (c > a && c < b) {
+        console.log('c');
+    }
+    else if (c < a && c > b) {
+        console.log('c');
+    }
+
+    // - Перепишіть конструкцію if з використанням умовного оператора '?':
+    // let result;
+    // if (a + b < 4) {
+    //     result = 'Мало';
+    // } else {
+    //     result = 'Багато';
+    // }
+
+    let x = 2;
+    let y = 7;
+    let result = (x + y < 4)? 'Мало' : 'Багато';
+    console.log(result)
+
+    // - Маємо будь яке число від -100 , 0 , +100 потрібно перевірити яким є число: позитивним, негативним або нулем
+    // напишіть це тернарним оператором
+
+    let number = '-3';
+    let answer = (number > 0)? 'Позитивне число' : (number < 0)? 'Негативне число' : 'Рівне нулю';
+    console.log(answer)
+
+
+
+</script>
+
+</body>
+</html>
