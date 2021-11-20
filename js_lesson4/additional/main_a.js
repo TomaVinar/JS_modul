@@ -1,21 +1,16 @@
 
 // - створити функцію, яка якщо приймає один аргумент, просто вивдоить його, якщо два аргументи - складає або конкатенує їх між собою.
 
-// function ar (items) {
-//     let a = arguments[0];
-//     let b = arguments[1];
-//     for (let i = 0; i < arguments.length; i++) {
-//         if (i !== 1) {
-//             a = arguments[i];
-//             console.log(a)
-//         } else if (i !== 2 ) {
-//             b = arguments[i];
-//             console.log(a + b);
-//         }
-//     }
-// }
-// ar('hello', 'world');
-
+function ar () {
+    for (let i = 0; i < arguments.length; i++) {
+        if ( arguments.length === 1) {
+            console.log(arguments[0]);
+        } else if ( arguments.length === 2 ) {
+            console.log(arguments[0] + arguments[1]);
+        }
+    }
+}
+ar(1);
 
 // - створити функцію  яка приймає два масиви та скаладає значення елементів з однаковими індексами  та повертає новий результуючий масив.
 //     EXAMPLE:
@@ -39,7 +34,6 @@ console.log(m);
 // EXAMPLE:
 //     [{name: 'Dima', age: 13}, {model: 'Camry'}]  ===> [ name, age, model ]
 
-let person = [{name: 'Dima', age: 13}, {model: 'Camry'}];
 
 function items (p) {
     let foo = [];
@@ -51,20 +45,26 @@ function items (p) {
     }
     console.log(foo);
 }
-items (person);
+items ([{name: 'Dima', age: 13}, {model: 'Camry'}]);
 
 
 //     - Створити функцію яка приймає масив будь яких объектів, та повертає масив значень всіх обєктів
 // EXAMPLE:
 //     [{name: 'Dima', age: 13}, {model: 'Camry'}]  ===> [ Dima, 13, Camry ]
 
-let info = [{name: 'Dima', age: 13}, {model: 'Camry'}];
+let info = [{name: 'Dima', age: 13, model: 'Camry'}];
 
 function list (f) {
     let mas12 = [];
     for (let i = 0; i < f.length; i++) {
-            mas12.push (f[i]);
+        const item = f[i];
+        for (const itemElement of item) {
+            mas12.push(itemElement.name, itemElement.age, itemElement.model);
+        }
     }
     console.log(mas12);
+    return mas12;
 }
-list(info);
+
+list ([info]);
+

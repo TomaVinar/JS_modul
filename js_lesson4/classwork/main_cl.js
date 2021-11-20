@@ -32,28 +32,40 @@
 //
 // // - створити функцію яка повертає найбільше число з масиву
 //
-// let result = 0;
-//
-// function listNumbers (x, y, z) {
-//     if  (x > y && x > z) {
-//         result = x;
-//         return result;
-//     }
-//     else if ( y > x && y > z) {
-//         result = y;
-//         return result;
-//     }
-//     else if ( z > x && z > y) {
-//         result = z;
-//         return result;
-//     }
-// }
-//
-// listNumbers( 21, 31, 41);
-// console.log(result)
+
+function sam (array) {
+    let max = array[0]
+    let min = array[0];
+    for (let i = 0; i < array.length; i++) {
+        const arrayElement = array[i];
+        if ( arrayElement > max) {
+            max = arrayElement;
+        }
+    }
+    console.log(max);
+    return max;
+}
+
+sam ([1, 3, 6, 9, 12, 16]);
+
 //
 // // - створити функцію яка повертає найменьше число з масиву
 //
+
+
+function numbs (mass123) {
+    min = mass123[0];
+    for (let i = 0; i < mass123.length; i++) {
+        const mass123Element = mass123[i];
+        if ( mass123Element < min ) {
+            min = mass123Element;
+        }
+    }
+    console.log(min);
+    return min;
+}
+
+numbs ([1, 3, 6, 9, 12, 16]);
 //
 // function list (num1, num2, num3) {
 //     let res = 0;
@@ -92,9 +104,9 @@
 // function numbersList (items) {
 //     let s = 0;
 //     for (const item of items) {
-//         s = (s + item)/ items.length;
+//         s = (s + item);
 //     }
-//     return s;
+//     return s/items.length;
 // }
 //
 // let summary = numbersList([100, 200, 300]);
