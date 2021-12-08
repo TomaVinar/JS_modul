@@ -1,0 +1,13 @@
+.persons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.persons img {
+    width: 160px;
+}
+
+.arrayList {
+    width: 100%;
+}

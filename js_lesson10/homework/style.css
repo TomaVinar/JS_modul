@@ -1,0 +1,21 @@
+
+.menu {
+    height: 120px;
+    width: 200px;
+    background: cornflowerblue;
+}
+
+#btn_toggle {
+    width: 40px;
+    height: 40px;
+    margin-top: 40px;
+    padding: 0;
+}
+
+#forma {
+    margin-top: 40px;
+}
+
+#confirmation {
+    margin-top: 20px;
+}
