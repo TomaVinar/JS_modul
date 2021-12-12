@@ -35,7 +35,6 @@ fetch ('https://jsonplaceholder.typicode.com/users')
                             let title = document.createElement('h6');
                             let bodyPost = document.createElement('p');
                             let btn2 = document.createElement('button');
-
                             id.innerText = `${post.id}`;
                             title.innerText = `${post.title}`;
                             bodyPost.innerText = `${post.body}`;

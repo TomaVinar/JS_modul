@@ -21,7 +21,6 @@ fetch('https://jsonplaceholder.typicode.com/posts')
                     userId.innerText = `USER Id ${post.userId}`;
                     bodyDiv.innerText = `${post.body}`
                     button.innerText = `Add`
-
                     containerPost.append(id, userId, title, bodyDiv, button);
                     document.body.appendChild(containerPost);
                     button.addEventListener('click', function () {
