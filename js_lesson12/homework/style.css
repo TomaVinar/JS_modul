@@ -1,0 +1,23 @@
+.wrapper {
+    display: inline-block;
+}
+
+
+.main_container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    column-count: 5;
+}
+
+h5 {
+    width: 180px;
+}
+p {
+    width: 160px;
+}
+.post_container {
+    margin-left: 30px;
+    width: 210px;
+    flex-direction: column;
+}
