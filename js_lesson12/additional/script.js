@@ -40,7 +40,7 @@ fetch ('https://jsonplaceholder.typicode.com/users')
                             bodyPost.innerText = `${post.body}`;
                             btn2.innerText = `All comments`;
                             divPost.append(id, title, bodyPost, btn2);
-                            document.body.appendChild(divPost);
+                            divUser.appendChild(divPost);
                             btn2.addEventListener('click', function () {
                                 fetch('https://jsonplaceholder.typicode.com/comments')
                                     .then(response => response.json())
@@ -58,7 +58,7 @@ fetch ('https://jsonplaceholder.typicode.com/users')
                                                 commentEmail.innerText = `${comment.email}`;
                                                 commentBody.innerText = `${comment.body}`;
                                                 divComment.append(commentId, commentName, commentEmail, commentBody);
-                                                document.body.appendChild(divComment);
+                                                divPost.appendChild(divComment);
                                             }
                                         }
                                     })

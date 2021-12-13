@@ -40,7 +40,7 @@ fetch('https://jsonplaceholder.typicode.com/posts')
                                         email.innerText = `${comment.email}`;
                                         bodyComment.innerText = `${comment.body}`;
                                         commentDiv.append(commentId, commentName, email, bodyComment);
-                                        document.body.appendChild(commentDiv);
+                                        containerPost.appendChild(commentDiv);
                                     }
                                 }
                             })
