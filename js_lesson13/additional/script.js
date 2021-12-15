@@ -29,7 +29,6 @@ button.addEventListener('click', (e) => {
         localStorage.setItem('product', JSON.stringify([...arr, product]));
     } else {
         localStorage.setItem('product', JSON.stringify([product]));
-
     }
 })
 

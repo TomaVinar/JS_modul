@@ -3,8 +3,8 @@ btn.innerText = 'Delete All'
 document.body.appendChild(btn);
 
 btn.onclick = (e) => {
-    localStorage.removeItem('product')
-    location.reload()
+    localStorage.removeItem('product');
+    location.reload();
 }
 
 let array = JSON.parse(localStorage.getItem('product'));
@@ -28,8 +28,6 @@ for (const arrayElement of array) {
     itemBtn.onclick = () => {
        let newArray = array.filter (value => value.id !== arrayElement.id);
         localStorage.setItem('product', JSON.stringify(newArray));
-        location.reload()
-
+        location.reload();
     }
-
 }
