@@ -48,8 +48,11 @@ for (const element of array) {
         block.append(userBlock);
         document.body.append(block);
 
-        btn.addEventListener('click', (e) => {
-            fetch('https://jsonplaceholder.typicode.com/posts')
+        btn.addEventListener('click', function onClick () {
+            console.log('On clicked');
+                btn.removeEventListener('click', onClick);
+
+                 fetch('https://jsonplaceholder.typicode.com/posts')
                 .then(response => response.json())
                 .then(posts => {
                     for (const post of posts) {
@@ -64,6 +67,7 @@ for (const element of array) {
                             title.classList.add('title_name');
                             let buttonPost = document.createElement('button');
 
+
                             buttonPost.innerText = `More`;
                             buttonPost.classList.add('button_posts');
                             title.innerText = `${post.title}`;
@@ -73,15 +77,14 @@ for (const element of array) {
                             postSection.append(divTitles);
                             document.body.appendChild(postSection);
 
-                            buttonPost.addEventListener('click', (e) => {
-                                e.preventDefault();
-                                let postInfo = posts.filter (value => value.id === post.id);
+                            buttonPost.addEventListener('click', function () {
+                                let postInfo = posts.filter(value => value.id === post.id);
                                 localStorage.setItem('post', JSON.stringify(postInfo));
                                 location.href = 'post_details.html';
                             })
                         }
                     }
                 })
-        })
+            })
 }
 

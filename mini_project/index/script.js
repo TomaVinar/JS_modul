@@ -16,7 +16,9 @@ for (const arrElement of arr) {
     postDiv.append(titleId, titlePost, content, button);
     document.body.appendChild(postDiv);
 
-    button.addEventListener('click', function () {
+    button.addEventListener('click', function onClick () {
+        console.log('Click');
+        button.removeEventListener('click', onClick);
         fetch('https://jsonplaceholder.typicode.com/comments')
             .then(response => response.json())
             .then(comments => {
